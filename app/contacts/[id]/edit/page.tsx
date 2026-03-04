@@ -204,7 +204,7 @@ export default function EditContactPage({
     }).eq("id", id);
 
     if (error) {
-      toast.error("Failed to save changes");
+      toast.error(error.message ?? "Failed to save changes");
       setSaving(false);
       return;
     }
@@ -285,7 +285,7 @@ export default function EditContactPage({
         </div>
       </div>
 
-      <form onSubmit={handleSubmit} className="mx-auto max-w-lg px-4 py-6 space-y-6">
+      <form onSubmit={handleSubmit} noValidate className="mx-auto max-w-lg px-4 py-6 space-y-6">
         {/* Photo */}
         <div className="flex flex-col items-center gap-3">
           <button type="button" onClick={() => fileRef.current?.click()} className="group relative">

@@ -140,6 +140,15 @@ export default function NewContactPage() {
     setLoading(true);
 
     const supabase = createClient();
+
+    // Ensure session is active
+    const { data: { session } } = await supabase.auth.getSession();
+    if (!session) {
+      toast.error("Not logged in — please sign in again");
+      setLoading(false);
+      return;
+    }
+
     let photoUrl: string | null = null;
 
     if (photoFile) {
@@ -162,6 +171,7 @@ export default function NewContactPage() {
       .from("contacts")
       .insert({
         name: name.trim(),
+        archived: false,
         category: category || null,
         how_we_met: howWeMet.trim() || null,
         notes: notes.trim() || null,
@@ -178,7 +188,11 @@ export default function NewContactPage() {
       .single();
 
     if (error || !contact) {
-      toast.error("Failed to save contact");
+      const msg = error
+        ? `${error.message} (${error.code})`
+        : "Insert returned no data";
+      console.error("Save contact error:", error);
+      toast.error(msg);
       setLoading(false);
       return;
     }
@@ -223,7 +237,7 @@ export default function NewContactPage() {
         </div>
       </div>
 
-      <form onSubmit={handleSubmit} className="mx-auto max-w-lg px-4 py-6 space-y-6">
+      <form onSubmit={handleSubmit} noValidate className="mx-auto max-w-lg px-4 py-6 space-y-6">
         {/* Photo */}
         <div className="flex flex-col items-center gap-3">
           <button
