@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.kayan.app-mergeReleaseResources-5:/values-fr/values-fr.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\kyanm\\.gradle\\caches\\transforms-4\\539381029df6ba1c1434a8fd8d9ac13a\\transformed\\core-1.1.0\\res\\values-fr\\values-fr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "488",
+                        "endColumns": "100",
+                        "endOffsets": "584"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\kyanm\\.gradle\\caches\\transforms-4\\6ef79185e9d16a623353fdf1a6d7d60d\\transformed\\browser-1.4.0\\res\\values-fr\\values-fr.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,162,264,383",
+                        "endColumns": "106,101,118,104",
+                        "endOffsets": "157,259,378,483"
+                    }
+                }
+            ]
+        }
+    ]
+}

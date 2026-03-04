@@ -1,0 +1,170 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.kayan.app"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="34" />
+10
+11    <queries>
+11-->[com.google.androidbrowserhelper:androidbrowserhelper:2.5.0] C:\Users\kyanm\.gradle\caches\transforms-4\45515876b6d71ec48596c3701d700f15\transformed\jetified-androidbrowserhelper-2.5.0\AndroidManifest.xml:26:5-34:15
+12        <intent>
+12-->[com.google.androidbrowserhelper:androidbrowserhelper:2.5.0] C:\Users\kyanm\.gradle\caches\transforms-4\45515876b6d71ec48596c3701d700f15\transformed\jetified-androidbrowserhelper-2.5.0\AndroidManifest.xml:27:9-33:18
+13            <action android:name="android.intent.action.VIEW" />
+13-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:59:17-69
+13-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:59:25-66
+14
+15            <category android:name="android.intent.category.BROWSABLE" />
+15-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:61:17-78
+15-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:61:27-75
+16
+17            <data android:scheme="https" />
+17-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:62:17-64:68
+17-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:63:21-43
+18        </intent>
+19    </queries>
+20
+21    <application
+21-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:4:5-79:19
+22        android:allowBackup="true"
+22-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:5:9-35
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.1.0] C:\Users\kyanm\.gradle\caches\transforms-4\539381029df6ba1c1434a8fd8d9ac13a\transformed\core-1.1.0\AndroidManifest.xml:24:18-86
+24        android:extractNativeLibs="false"
+25        android:icon="@mipmap/ic_launcher"
+25-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:6:9-43
+26        android:label="@string/app_name"
+26-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:7:9-41
+27        android:roundIcon="@mipmap/ic_launcher_round"
+27-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:8:9-54
+28        android:supportsRtl="true"
+28-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:9:9-35
+29        android:theme="@style/Theme.Kayan" >
+29-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:10:9-43
+30        <activity
+30-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:12:9-67:20
+31            android:name="com.google.androidbrowserhelper.trusted.LauncherActivity"
+31-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:13:13-84
+32            android:exported="true"
+32-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:15:13-36
+33            android:label="@string/app_name" >
+33-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:14:13-45
+34
+35            <!-- The URL to open -->
+36            <meta-data
+36-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:18:13-20:55
+37                android:name="android.support.customtabs.trusted.DEFAULT_URL"
+37-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:19:17-78
+38                android:value="@string/default_url" />
+38-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:20:17-52
+39
+40            <!-- Status bar and nav bar color -->
+41            <meta-data
+41-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:23:13-25:58
+42                android:name="android.support.customtabs.trusted.STATUS_BAR_COLOR"
+42-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:24:17-83
+43                android:resource="@color/colorPrimary" />
+43-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:25:17-55
+44            <meta-data
+44-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:26:13-28:58
+45                android:name="android.support.customtabs.trusted.STATUS_BAR_COLOR_DARK"
+45-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:27:17-88
+46                android:resource="@color/colorPrimary" />
+46-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:28:17-55
+47            <meta-data
+47-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:29:13-31:58
+48                android:name="android.support.customtabs.trusted.NAVIGATION_BAR_COLOR"
+48-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:30:17-87
+49                android:resource="@color/colorPrimary" />
+49-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:31:17-55
+50            <meta-data
+50-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:32:13-34:58
+51                android:name="android.support.customtabs.trusted.NAVIGATION_BAR_DIVIDER_COLOR"
+51-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:33:17-95
+52                android:resource="@color/colorPrimary" />
+52-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:34:17-55
+53
+54            <!-- Splash screen -->
+55            <meta-data
+55-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:37:13-39:60
+56                android:name="android.support.customtabs.trusted.SPLASH_IMAGE_DRAWABLE"
+56-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:38:17-88
+57                android:resource="@drawable/splash_icon" />
+57-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:39:17-57
+58            <meta-data
+58-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:40:13-42:61
+59                android:name="android.support.customtabs.trusted.SPLASH_SCREEN_BACKGROUND_COLOR"
+59-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:41:17-97
+60                android:resource="@color/backgroundColor" />
+60-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:42:17-58
+61            <meta-data
+61-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:43:13-45:39
+62                android:name="android.support.customtabs.trusted.SPLASH_SCREEN_FADE_OUT_DURATION"
+62-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:44:17-98
+63                android:value="400" />
+63-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:45:17-36
+64            <meta-data
+64-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:47:13-49:61
+65                android:name="android.support.customtabs.trusted.FILE_PROVIDER_AUTHORITY"
+65-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:48:17-90
+66                android:value="@string/providerAuthority" />
+66-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:49:17-58
+67
+68            <!-- App launcher -->
+69            <intent-filter>
+69-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:52:13-55:29
+70                <action android:name="android.intent.action.MAIN" />
+70-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:53:17-69
+70-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:53:25-66
+71
+72                <category android:name="android.intent.category.LAUNCHER" />
+72-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:54:17-77
+72-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:54:27-74
+73            </intent-filter>
+74
+75            <!-- Handle the URL so TWA opens instead of browser -->
+76            <intent-filter android:autoVerify="true" >
+76-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:58:13-65:29
+76-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:58:28-53
+77                <action android:name="android.intent.action.VIEW" />
+77-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:59:17-69
+77-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:59:25-66
+78
+79                <category android:name="android.intent.category.DEFAULT" />
+79-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:60:17-76
+79-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:60:27-73
+80                <category android:name="android.intent.category.BROWSABLE" />
+80-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:61:17-78
+80-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:61:27-75
+81
+82                <data
+82-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:62:17-64:68
+83                    android:host="@string/asset_statements_host"
+83-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:64:21-65
+84                    android:scheme="https" />
+84-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:63:21-43
+85            </intent-filter>
+86        </activity>
+87
+88        <provider
+88-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:69:9-77:20
+89            android:name="androidx.core.content.FileProvider"
+89-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:70:13-62
+90            android:authorities="@string/providerAuthority"
+90-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:71:13-60
+91            android:exported="false"
+91-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:72:13-37
+92            android:grantUriPermissions="true" >
+92-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:73:13-47
+93            <meta-data
+93-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:74:13-76:53
+94                android:name="android.support.FILE_PROVIDER_PATHS"
+94-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:75:17-67
+95                android:resource="@xml/filepaths" />
+95-->C:\localhost\Kayan\android\app\src\main\AndroidManifest.xml:76:17-50
+96        </provider>
+97    </application>
+98
+99</manifest>
