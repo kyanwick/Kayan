@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  108dp canvas. Safe zone is ~21-87 on each axis.
+  Lightning bolt scaled from original SVG polygon:
+    110,20 70,105 100,105 82,172 130,87 98,87  (on 192x192)
+  → scaled to fit safe zone on 108dp canvas.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M59,28 L45,57 L55,57 L49,80 L67,51 L55,51 Z" />
+
+</vector>

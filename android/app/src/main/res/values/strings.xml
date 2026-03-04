@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kayan</string>
+
+    <!--
+        IMPORTANT: Replace with your deployed Vercel URL (no trailing slash).
+        Example: https://kayan.vercel.app
+    -->
+    <string name="default_url">https://kayan-tau.vercel.app/</string>
+
+    <!-- Must match the host part of your Vercel URL -->
+    <string name="asset_statements_host">kayan-tau.vercel.app/</string>
+
+    <string name="providerAuthority">com.kayan.app.fileprovider</string>
+</resources>

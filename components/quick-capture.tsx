@@ -9,7 +9,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { createClient } from "@/lib/supabase/client";
 
-const HIDE_ON = ["/login", "/contacts/new"];
+// Hide on pages that have their own FAB or don't need quick-add
+const HIDE_EXACT = ["/", "/login", "/contacts/new"];
+const HIDE_PREFIX = ["/contacts/"]; // detail + edit pages have LogInteractionDialog
 
 export function QuickCapture() {
   const pathname = usePathname();
@@ -20,7 +22,10 @@ export function QuickCapture() {
   const [howWeMet, setHowWeMet] = useState("");
   const [loading, setLoading] = useState(false);
 
-  if (HIDE_ON.some((p) => pathname.startsWith(p))) return null;
+  const hidden =
+    HIDE_EXACT.includes(pathname) ||
+    HIDE_PREFIX.some((p) => pathname.startsWith(p));
+  if (hidden) return null;
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
