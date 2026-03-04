@@ -167,23 +167,27 @@ export default function NewContactPage() {
       }
     }
 
+    // Only include fields with actual values — avoids schema cache errors
+    // for columns that were recently added via ALTER TABLE
+    const payload: Record<string, unknown> = {
+      name: name.trim(),
+      archived: false,
+    };
+    if (category)                                   payload.category     = category;
+    if (howWeMet.trim())                            payload.how_we_met   = howWeMet.trim();
+    if (notes.trim())                               payload.notes        = notes.trim();
+    if (photoUrl)                                   payload.photo_url    = photoUrl;
+    if (email.trim())                               payload.email        = email.trim();
+    if (phone.trim())                               payload.phone        = phone.trim();
+    if (birthday)                                   payload.birthday     = birthday;
+    if (instagram.replace(/^@/, "").trim())         payload.instagram    = instagram.replace(/^@/, "").trim();
+    if (twitter.replace(/^@/, "").trim())           payload.twitter      = twitter.replace(/^@/, "").trim();
+    if (linkedin.replace(/^@/, "").trim())          payload.linkedin     = linkedin.replace(/^@/, "").trim();
+    if (tiktok.replace(/^@/, "").trim())            payload.tiktok       = tiktok.replace(/^@/, "").trim();
+
     const { data: contact, error } = await supabase
       .from("contacts")
-      .insert({
-        name: name.trim(),
-        archived: false,
-        category: category || null,
-        how_we_met: howWeMet.trim() || null,
-        notes: notes.trim() || null,
-        photo_url: photoUrl,
-        email: email.trim() || null,
-        phone: phone.trim() || null,
-        birthday: birthday || null,
-        instagram: instagram.replace(/^@/, "").trim() || null,
-        twitter: twitter.replace(/^@/, "").trim() || null,
-        linkedin: linkedin.replace(/^@/, "").trim() || null,
-        tiktok: tiktok.replace(/^@/, "").trim() || null,
-      })
+      .insert(payload)
       .select()
       .single();
 

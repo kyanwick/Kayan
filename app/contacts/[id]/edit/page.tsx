@@ -188,20 +188,26 @@ export default function EditContactPage({
       }
     }
 
-    const { error } = await supabase.from("contacts").update({
+    const payload: Record<string, unknown> = {
       name: name.trim(),
-      category: category || null,
+      category:   category || null,
       how_we_met: howWeMet.trim() || null,
-      notes: notes.trim() || null,
-      photo_url: newPhotoUrl,
-      email: email.trim() || null,
-      phone: phone.trim() || null,
-      birthday: birthday || null,
-      instagram: instagram.replace(/^@/, "").trim() || null,
-      twitter: twitter.replace(/^@/, "").trim() || null,
-      linkedin: linkedin.replace(/^@/, "").trim() || null,
-      tiktok: tiktok.replace(/^@/, "").trim() || null,
-    }).eq("id", id);
+      notes:      notes.trim() || null,
+      photo_url:  newPhotoUrl,
+      email:      email.trim() || null,
+      phone:      phone.trim() || null,
+      birthday:   birthday || null,
+    };
+    const ig = instagram.replace(/^@/, "").trim();
+    const tw = twitter.replace(/^@/, "").trim();
+    const li = linkedin.replace(/^@/, "").trim();
+    const tt = tiktok.replace(/^@/, "").trim();
+    if (ig) payload.instagram = ig;
+    if (tw) payload.twitter   = tw;
+    if (li) payload.linkedin  = li;
+    if (tt) payload.tiktok    = tt;
+
+    const { error } = await supabase.from("contacts").update(payload).eq("id", id);
 
     if (error) {
       toast.error(error.message ?? "Failed to save changes");
