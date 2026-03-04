@@ -4,6 +4,8 @@
 .pnp.js
 .yarn/install-state.gz
 
+/android
+
 # testing
 /coverage
 
