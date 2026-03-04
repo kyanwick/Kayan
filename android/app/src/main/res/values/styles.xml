@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.Kayan" parent="android:Theme.NoTitleBar">
+    <style name="Theme.Kayan" parent="@android:style/Theme.NoTitleBar">
         <item name="android:windowBackground">@color/backgroundColor</item>
-        <item name="android:statusBarColor">@color/colorPrimary</item>
-        <item name="android:navigationBarColor">@color/colorPrimary</item>
     </style>
 </resources>
